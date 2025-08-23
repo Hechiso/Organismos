@@ -1,2 +1,2 @@
-# Organismos-C-
+# Organismos
 Generacion de entorno procedural y organismos 
