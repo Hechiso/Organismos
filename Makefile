@@ -18,6 +18,7 @@ LDFLAGS = `sdl2-config --libs` -lSDL2_mixer -lSDL2_ttf -lX11
 
 # Regla principal
 all: $(BUILD_DIR) $(TARGET)
+	mv $(TARGET) build/
 
 # Cómo compilar el ejecutable
 $(TARGET): $(OBJS)
@@ -36,4 +37,7 @@ clean:
 	rm -rf $(BUILD_DIR)/*.o $(TARGET)
 
 .PHONY: all clean
-
+	
+run: all
+	@echo "Ejecución de $(TARGET)..."
+	@./build/$(TARGET)
