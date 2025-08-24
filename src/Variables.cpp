@@ -4,7 +4,6 @@
 int ancho = 0;
 int alto = 0;
 
-
 //----------------
 
 int medidaChunk = 64;
