@@ -4,7 +4,7 @@
 #include "Variables.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
-
+#include "Entidad.h"
 
 
 class EstrategiaInterfaz {
@@ -17,8 +17,12 @@ public:
     	void ejecutar(SDL_Renderer* renderer);
 };
 
+class EstrategiaMapa : public EstrategiaInterfaz{
+	public:
+		void ejecutar(SDL_Renderer* renderer);
+};
 
 void Texto(SDL_Renderer* render);
-        
+void dibujarEntidad(SDL_Renderer* renderer,const Entidad& e);        
 
 #endif

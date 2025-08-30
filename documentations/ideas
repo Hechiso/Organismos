@@ -1,0 +1,53 @@
+------------------------------------------------------  (  Simulacion  )
+
+
+Menu de inicio
+
+1.- iniciar partida    
+
+         pantalla para la creacion de un organismo simple
+ 											Valores de Inicializacion 
+                                 * Nombre []                                                Usuario
+				 * Nivel []                                                 0
+ 				 * Experiencia []                                           0
+				 * Hambre []                                                0
+                                 * Habilidad [Asimilar]                                     
+                                 * Matriz corporal 2*2 ----- solo una celula 
+											Puntos Asignados por el usuario [ 9 ]
+				 * Vida							    []
+				 * Fuerza						    []
+				 * Defenza						    []
+				 * Velocidad						    []
+
+	pantalla Mapa del usuario
+		1.- Añadir celulas al organismo
+			segun los espacios disponibles en la matriz del organismo 
+                        y las celulas ganadas el jugador podra editar el orden de las celulas
+
+                2.- Entrenar organismo
+                       se generaran organismos empesando por el devil y el jugador se enfrentara en el mapa del usuario 
+                       aunque el jugador pierda no terminara el juego 
+                       cada organismo solo dara el 10% de experiencia
+                  
+		3.- Soltar Organismos
+		       el jugador aparecera dentro del mundo del usuario y se movera de forma aleatoria
+
+		4.- Entrar en el Mundo
+			el jugador se apacerera dentro del mundo que se genero aleatoriamente y se pondra aprueba sus habilidades
+			abra organismos nuevos y mas fuertes
+			si el jugador pierde el juego termina y el organismo es asimilado y desaparece
+
+
+	Mecanicas del juego
+		El organismo se podra mover en 8 direcciones arriba,abajo,derecha,izquierda,y en las 4 diagonales
+		
+		*.-  el organismo sera una celula simple 
+		*.-  las primeras celulas seran 	
+					1.- celula simple              (suceptible a ataques)
+					2.- celula de defenza          (+ de defenza)
+					3.- celula de ataque           (+ de ataque)
+
+	        *.-  la experiencia te dara la oportunidad de subir de nivel y subiendo de nivel podras obtener habilidades para tus celulas
+		*.-  al asimilar y derrotar celulas enemigas ganaras celulas que podras añadir a tu organismo
+		*.-  segun el nivel el orgamisno la estructura de la celula crecera con la posibilidad de añadir mas celulas
+			

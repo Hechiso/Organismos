@@ -2,7 +2,7 @@
 #include "Variables.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
-
+#include "Mapa.h"
 
 
 VentanaSDL::VentanaSDL(const std::string& title, bool fullscreen, int width, int height, int posX, int posY)
@@ -33,8 +33,14 @@ VentanaSDL::VentanaSDL(const std::string& title, bool fullscreen, int width, int
 
 //----------------------------------------
 
-	Texto(m_renderer);
+// Crear una célula
+Entidad celula(50, 50);
 
+// En tu loop principal:
+
+
+	Texto(m_renderer);
+dibujarEntidad(m_renderer,celula);
 //---------------------------------------
     	return true;
 }

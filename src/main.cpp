@@ -19,7 +19,7 @@ int main(int argc, char* args[]) {
         	return 1;
     	}
 
-	EstrategiaPixel estrategia;
+	EstrategiaMapa estrategia;
 	ventana1.setEstrategia(&estrategia);
 
 	bool ejecutando = true;

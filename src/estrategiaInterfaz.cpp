@@ -1,6 +1,7 @@
 #include "../include/estrategiaInterfaz.h"
-
-
+#include "../include/Mapa.h"
+#include "../include/Entidad.h"
+#include "../include/Tile.h"
 void EstrategiaPixel::ejecutar(SDL_Renderer* renderer) {
     SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255); // Color morado neon
 
@@ -58,3 +59,38 @@ void Texto(SDL_Renderer* render){
 
 
 
+void EstrategiaMapa::ejecutar(SDL_Renderer* renderer){
+
+    const int tileSize = 4;
+
+Mapa map(1366 / 4, 736 / 4); // tamaño del mapa en tiles de 4px
+
+// Crear una célula
+map.obtenerTile(50, 50).ocupado = true;
+
+
+
+    for (int y = 0; y < map.getAlto(); ++y) {
+        for (int x = 0; x < map.getAncho(); ++x) {
+            const Tile& tile = map.obtenerTile(x, y);
+
+            if (tile.tipo == TipoTerreno::Fluido) {
+                SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255); // Azul
+            }
+
+            SDL_Rect rect = { x * tileSize, y * tileSize, tileSize, tileSize };
+            SDL_RenderFillRect(renderer, &rect);
+        }
+    }
+
+}
+
+
+void dibujarEntidad(SDL_Renderer* renderer, const Entidad& e) {
+    const int tileSize = 4;
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Blanco
+
+    SDL_Rect rect = { e.x * tileSize, e.y * tileSize, tileSize, tileSize };
+    SDL_RenderFillRect(renderer, &rect);
+}
