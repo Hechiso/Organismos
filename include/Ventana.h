@@ -7,9 +7,7 @@
 #include <X11/Xlib.h>
 #include <string>
 
-
 #include "estrategiaInterfaz.h"
-
 
 class VentanaSDL {
 public:

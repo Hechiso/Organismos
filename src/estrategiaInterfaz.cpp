@@ -1,7 +1,6 @@
 #include "../include/estrategiaInterfaz.h"
 #include "../include/Mapa.h"
-#include "../include/Entidad.h"
-#include "../include/Tile.h"
+
 void EstrategiaPixel::ejecutar(SDL_Renderer* renderer) {
     SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255); // Color morado neon
 
@@ -57,6 +56,14 @@ void Texto(SDL_Renderer* render){
         SDL_RenderCopy(render, message, NULL, &messageRect);
 }
 
+void dibujarEntidad(SDL_Renderer* renderer, const Entidad& e) {
+    const int tileSize = 4;
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Blanco
+
+    SDL_Rect rect = { e.x * tileSize, e.y * tileSize, tileSize, tileSize };
+    SDL_RenderFillRect(renderer, &rect);
+}
 
 
 void EstrategiaMapa::ejecutar(SDL_Renderer* renderer){
@@ -83,14 +90,9 @@ map.obtenerTile(50, 50).ocupado = true;
         }
     }
 
+Entidad celula(50,50);
+dibujarEntidad(renderer,celula);
+
+
 }
 
-
-void dibujarEntidad(SDL_Renderer* renderer, const Entidad& e) {
-    const int tileSize = 4;
-
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Blanco
-
-    SDL_Rect rect = { e.x * tileSize, e.y * tileSize, tileSize, tileSize };
-    SDL_RenderFillRect(renderer, &rect);
-}

@@ -31,17 +31,8 @@ VentanaSDL::VentanaSDL(const std::string& title, bool fullscreen, int width, int
 	        return false;
    	}
 
-//----------------------------------------
 
-// Crear una célula
-Entidad celula(50, 50);
-
-// En tu loop principal:
-
-
-	Texto(m_renderer);
-dibujarEntidad(m_renderer,celula);
-//---------------------------------------
+//	Texto(m_renderer);
     	return true;
 }
 

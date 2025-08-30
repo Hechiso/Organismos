@@ -6,7 +6,6 @@
 #include <SDL2/SDL_ttf.h>
 #include "Entidad.h"
 
-
 class EstrategiaInterfaz {
 public:
     virtual void ejecutar(SDL_Renderer* renderer) = 0;
@@ -17,12 +16,15 @@ public:
     	void ejecutar(SDL_Renderer* renderer);
 };
 
+void dibujarEntidad(SDL_Renderer* renderer,const Entidad& e);        
+
 class EstrategiaMapa : public EstrategiaInterfaz{
 	public:
 		void ejecutar(SDL_Renderer* renderer);
 };
 
+//----------------------------------------------------------------------------
+
 void Texto(SDL_Renderer* render);
-void dibujarEntidad(SDL_Renderer* renderer,const Entidad& e);        
 
 #endif
